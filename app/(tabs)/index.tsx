@@ -9,7 +9,7 @@ import {
   ScrollView,
   Dimensions,
 } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Circle, Marker } from 'react-native-maps';
 
 import { Earthquake, LatestQuakeLocation, LocationType } from '~/types/types';
 import { fetchEarthquake } from '~/utils/fetchEarthquake';
@@ -93,14 +93,25 @@ export default function Home() {
                     longitudeDelta: 2,
                   }}>
                   {latestQuakeLocation && (
-                    <Marker
-                      coordinate={{
-                        latitude: latestQuakeLocation.geometry.coordinates[1],
-                        longitude: latestQuakeLocation.geometry.coordinates[0],
-                      }}
-                      title={`Magnitude of ${latestQuakeLocation.properties.mag} Earthquake`}
-                      description={latestQuakeLocation.properties.place}
-                    />
+                    <View className="flex-1">
+                      <Marker
+                        coordinate={{
+                          latitude: latestQuakeLocation.geometry.coordinates[1],
+                          longitude: latestQuakeLocation.geometry.coordinates[0],
+                        }}
+                        title={`Magnitude of ${latestQuakeLocation.properties.mag} Earthquake`}
+                        description={latestQuakeLocation.properties.place}
+                      />
+                      <Circle
+                        center={{
+                          latitude: latestQuakeLocation.geometry.coordinates[1],
+                          longitude: latestQuakeLocation.geometry.coordinates[0],
+                        }}
+                        radius={100000}
+                        strokeColor="rgba(255,0,0,0.5)"
+                        fillColor="rgba(255,0,0,0.2)"
+                      />
+                    </View>
                   )}
                 </MapView>
               </View>
