@@ -1,22 +1,13 @@
-import { Stack } from 'expo-router';
-import { StyleSheet, View } from 'react-native';
-
-import { ScreenContent } from '~/components/ScreenContent';
+import { Platform, SafeAreaView, StatusBar, View, Text } from 'react-native';
 
 export default function Home() {
   return (
-    <>
-      <Stack.Screen options={{ title: 'Tab Two' }} />
-      <View style={styles.container}>
-        <ScreenContent path="app/(tabs)/two.tsx" title="Tab Two" />
-      </View>
-    </>
+    <View className="flex-1 bg-[#F3F4F6]">
+      <SafeAreaView
+        className="flex-1"
+        style={{ paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0 }}>
+        <Text>Location here!</Text>
+      </SafeAreaView>
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 24,
-  },
-});
