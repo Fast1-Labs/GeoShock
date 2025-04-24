@@ -11,20 +11,15 @@ import {
 } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 
+import { Earthquake, LatestQuakeLocation, LocationType } from '~/types/types';
 import { fetchEarthquake } from '~/utils/fetchEarthquake';
 import { getLocation } from '~/utils/getLocation';
 
 export default function Home() {
-  const [location, setLocation] = useState<{
-    latitude: number;
-    longitude: number;
-    city?: string;
-    region?: string;
-    country?: string;
-  } | null>(null);
+  const [location, setLocation] = useState<LocationType | null>(null);
   const [loading, setLoading] = useState(true);
-  const [earthquakes, setEarthquakes] = useState<any[]>([]);
-  const [latestQuakeLocation, setLatestQuakeLocation] = useState();
+  const [earthquakes, setEarthquakes] = useState<Earthquake[]>([]);
+  const [latestQuakeLocation, setLatestQuakeLocation] = useState<LatestQuakeLocation>();
 
   useEffect(() => {
     const fetchLocation = async () => {
