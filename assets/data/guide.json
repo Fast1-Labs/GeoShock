@@ -1,0 +1,81 @@
+[
+  {
+    "title": "Before an Earthquake",
+    "description": "Preparation is key to staying safe during and after an earthquake.",
+    "tips": [
+      "Create and practice an emergency plan with your family.",
+      "Identify safe spots in each room, such as under sturdy furniture or against interior walls.",
+      "Secure heavy furniture, mirrors, and appliances to prevent tipping or falling.",
+      "Store emergency supplies including water, non-perishable food, flashlight, batteries, and a first aid kit.",
+      "Know how to turn off gas, water, and electricity in your home.",
+      "Keep important documents (ID, insurance, etc.) in a safe and easily accessible location.",
+      "Install emergency alerts on your phone and stay informed about local emergency systems."
+    ]
+  },
+  {
+    "title": "During an Earthquake (Indoors)",
+    "description": "Protect yourself by taking immediate action to avoid falling objects and collapsing structures.",
+    "tips": [
+      "Drop to the ground, take cover under sturdy furniture, and hold on until the shaking stops.",
+      "Stay away from windows, mirrors, glass, and heavy objects that could fall.",
+      "Do not run outside during the shaking.",
+      "Stay indoors until the shaking stops and it is safe to exit.",
+      "If you're in bed, stay there and protect your head with a pillow."
+    ]
+  },
+  {
+    "title": "During an Earthquake (Outdoors)",
+    "description": "Stay in an open area away from potential hazards.",
+    "tips": [
+      "Move to an open space away from buildings, trees, streetlights, and power lines.",
+      "Drop to the ground and protect your head and neck.",
+      "Remain in place until the shaking stops.",
+      "If driving, pull over to a clear location and stop. Avoid overpasses, bridges, and tunnels."
+    ]
+  },
+  {
+    "title": "After an Earthquake",
+    "description": "Stay alert and cautious to avoid aftershocks and hazards caused by the quake.",
+    "tips": [
+      "Check yourself and others for injuries and provide first aid if needed.",
+      "Be prepared for aftershocks and move to a safe location if your current area is unstable.",
+      "Avoid using elevators in damaged buildings.",
+      "Inspect your home for damage including gas leaks, electrical issues, and structural hazards.",
+      "Do not enter damaged buildings until they are declared safe.",
+      "Listen to emergency information and instructions from authorities.",
+      "Use text messaging or social media to communicate, as phone lines may be overloaded.",
+      "Avoid driving unless it's necessary for safety or emergency purposes."
+    ]
+  },
+  {
+    "title": "Emergency Kit Essentials",
+    "description": "Prepare a grab-and-go bag that can support you for at least 72 hours.",
+    "tips": [
+      "Water (at least 1 gallon per person per day)",
+      "Non-perishable food",
+      "First aid kit",
+      "Battery-powered or hand-crank radio",
+      "Flashlight and extra batteries",
+      "Personal hygiene items (soap, sanitizer, toothbrush)",
+      "Whistle (to signal for help)",
+      "Cell phone and portable chargers",
+      "Important documents (ID, medical records, insurance)",
+      "Cash (ATMs may not work)",
+      "Extra clothes and blankets",
+      "Medications and medical supplies",
+      "Mask or face covering",
+      "Map of the local area"
+    ]
+  },
+  {
+    "title": "Special Considerations",
+    "description": "Everyone’s needs are different. Make sure your plan includes special considerations.",
+    "tips": [
+      "Plan for infants, elderly family members, and pets.",
+      "Store extra supplies for those with medical conditions or disabilities.",
+      "Know your community’s evacuation plans and shelter locations.",
+      "Label medications and include emergency contact information with your kit.",
+      "Consider cultural and language needs in your communication plan."
+    ]
+  }
+]
