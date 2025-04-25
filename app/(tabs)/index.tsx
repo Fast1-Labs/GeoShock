@@ -7,10 +7,10 @@ import {
   StatusBar,
   ActivityIndicator,
   ScrollView,
-  Dimensions,
 } from 'react-native';
-import MapView, { Circle, Marker } from 'react-native-maps';
 
+import LatestEarthquakeMap from '~/components/LatestEarthquakeMap';
+import NearbyEarthquakeList from '~/components/NearbyEarthquakeList';
 import { Earthquake, LatestQuakeLocation, LocationType } from '~/types/types';
 import { fetchEarthquake } from '~/utils/fetchEarthquake';
 import { getLocation } from '~/utils/getLocation';
@@ -55,66 +55,11 @@ export default function Home() {
                   Location: {location.city},{location.region}/{location.country}
                 </Text>
               </View>
-              <View className="h-96 p-2">
-                <Text className="mb-2 text-lg font-semibold">Nearby Earthquakes</Text>
-                {earthquakes.length > 0 && (
-                  <ScrollView
-                    contentContainerClassName="gap-2"
-                    showsVerticalScrollIndicator={false}
-                    contentContainerStyle={{ paddingBottom: 100 }}>
-                    {earthquakes.map((quake) => (
-                      <View key={quake.id} className="mb-2 rounded-lg bg-white p-3 shadow">
-                        <Text className="font-medium text-red-600">
-                          {quake.properties.mag} - {quake.properties.place}
-                        </Text>
-                        <Text className="text-xs text-gray-500">
-                          {new Date(quake.properties.time).toLocaleString()}
-                        </Text>
-                      </View>
-                    ))}
-                  </ScrollView>
-                )}
-              </View>
-              <View className="p-2">
-                <Text className="mb-2 text-lg font-semibold">Latest Earthquake</Text>
-                <MapView
-                  style={{
-                    width: Dimensions.get('window').width / 1.1,
-                    height: Dimensions.get('window').height / 3.25,
-                    flex: 1,
-                    alignSelf: 'center',
-                  }}
-                  mapType="hybrid"
-                  showsUserLocation
-                  initialRegion={{
-                    latitude: latestQuakeLocation?.geometry.coordinates[1] || location.latitude,
-                    longitude: latestQuakeLocation?.geometry.coordinates[0] || location.longitude,
-                    latitudeDelta: 2,
-                    longitudeDelta: 2,
-                  }}>
-                  {latestQuakeLocation && (
-                    <View className="flex-1">
-                      <Marker
-                        coordinate={{
-                          latitude: latestQuakeLocation.geometry.coordinates[1],
-                          longitude: latestQuakeLocation.geometry.coordinates[0],
-                        }}
-                        title={`Magnitude of ${latestQuakeLocation.properties.mag} Earthquake`}
-                        description={latestQuakeLocation.properties.place}
-                      />
-                      <Circle
-                        center={{
-                          latitude: latestQuakeLocation.geometry.coordinates[1],
-                          longitude: latestQuakeLocation.geometry.coordinates[0],
-                        }}
-                        radius={100000}
-                        strokeColor="rgba(255,0,0,0.5)"
-                        fillColor="rgba(255,0,0,0.2)"
-                      />
-                    </View>
-                  )}
-                </MapView>
-              </View>
+              <NearbyEarthquakeList earthquakes={earthquakes} />
+              <LatestEarthquakeMap
+                latestQuakeLocation={latestQuakeLocation}
+                fallbackCoords={{ latitude: location.latitude, longitude: location.longitude }}
+              />
             </View>
           ) : (
             <Text>Failed to get location.</Text>
