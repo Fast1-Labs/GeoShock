@@ -13,6 +13,9 @@ export type Earthquake = {
     place: string;
     time: Date;
   };
+  geometry: {
+    coordinates: any[];
+  };
 };
 
 export type LatestQuakeLocation = {
