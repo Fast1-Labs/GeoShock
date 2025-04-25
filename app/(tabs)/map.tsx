@@ -27,7 +27,12 @@ export default function Home() {
     fetchLocation();
   }, []);
 
-  if (loading) return <ActivityIndicator size="large" style={{ alignSelf: 'center' }} />;
+  if (loading)
+    return (
+      <View className="flex-1 items-center justify-center bg-[#E0E2E7]">
+        <ActivityIndicator size="large" />
+      </View>
+    );
 
   return (
     <View className="flex-1 bg-[#E0E2E7]">
@@ -51,8 +56,8 @@ export default function Home() {
                 latitude: quake.geometry.coordinates[1],
                 longitude: quake.geometry.coordinates[0],
               }}
-              title={`M ${quake.properties.mag}`}
-              description={quake.properties.place}
+              title={`${quake.properties.mag}`}
+              description={`${quake.properties.place} - ${new Date(quake.properties.time).toLocaleString()}`}
               pinColor="red"
             />
           ))}

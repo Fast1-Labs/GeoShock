@@ -4,8 +4,7 @@ import { Earthquake } from '~/types/types';
 
 export default function NearbyEarthquakeList({ earthquakes }: { earthquakes: Earthquake[] }) {
   return (
-    <View className="h-96 p-2">
-      <Text className="mb-2 text-lg font-semibold">Nearby Earthquakes</Text>
+    <View className="p-2">
       <ScrollView
         contentContainerClassName="gap-2"
         showsVerticalScrollIndicator={false}

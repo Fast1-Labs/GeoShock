@@ -41,6 +41,14 @@ export default function Home() {
     fetchLocation();
   }, []);
 
+  if (loading) {
+    return (
+      <View className="flex-1 items-center justify-center bg-[#E0E2E7]">
+        <ActivityIndicator size="large" />
+      </View>
+    );
+  }
+
   return (
     <View className="flex-1 bg-[#E0E2E7]">
       <SafeAreaView
@@ -56,7 +64,10 @@ export default function Home() {
                   Location: {location.city},{location.region}/{location.country}
                 </Text>
               </View>
-              <NearbyEarthquakeList earthquakes={earthquakes} />
+              <View className="mb-10 h-96 p-2">
+                <Text className="mb-2 text-lg font-semibold">Nearby Earthquakes</Text>
+                <NearbyEarthquakeList earthquakes={earthquakes} />
+              </View>
               <LatestEarthquakeMap
                 latestQuakeLocation={latestQuakeLocation}
                 fallbackCoords={{ latitude: location.latitude, longitude: location.longitude }}
