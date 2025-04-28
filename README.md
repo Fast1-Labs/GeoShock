@@ -35,6 +35,8 @@ npm start
 # or
 yarn start
 
+```
+
 ## Usage
 1. Open the app.
 2. Grant location permissions.
