@@ -62,6 +62,7 @@ yarn start
 ├── types/                  # TypeScript types and interfaces
 ├── App.tsx
 └── README.md
+```
 
 ## Contributing
 
