@@ -24,7 +24,7 @@ GeoShock is a mobile application that displays recent earthquake information aro
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/geoshock.git
+git clone https://github.com/fast1-labs/geoshock.git
 
 # Navigate into the project directory
 cd geoshock
