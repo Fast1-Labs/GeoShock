@@ -13,8 +13,10 @@ GeoShock is a mobile application that displays recent earthquake information aro
 
 ## Screenshots
 <!-- Add screenshots here when available -->
-![Image](https://github.com/user-attachments/assets/6bcb0da7-8c6c-45e4-b15f-0a94a1a56fe3)
-![Image](https://github.com/user-attachments/assets/b00a8593-166c-405d-a9eb-5c7c932f7863)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6bcb0da7-8c6c-45e4-b15f-0a94a1a56fe3" alt="Screenshot 1" width="200" />
+  <img src="https://github.com/user-attachments/assets/b00a8593-166c-405d-a9eb-5c7c932f7863" alt="Screenshot 2" width="200" />
+</p>
 
 ## Installation
 
