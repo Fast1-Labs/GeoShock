@@ -59,9 +59,9 @@ yarn start
 ## Project Structure
 ```bash
 ├── assets/
-│   └── data/            # App images, onboarding illustrations
+│   └── data/               # App images, onboarding illustrations
 ├── components/             # Reusable UI components
-├── app/                # Screen files like Home, About, Onboarding
+├── app/                    # Screen files like Home, About, Onboarding
 ├── utils/                  # Utility functions (fetchEarthquake, getLocation)
 ├── types/                  # TypeScript types and interfaces
 
