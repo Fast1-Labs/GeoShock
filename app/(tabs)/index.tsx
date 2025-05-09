@@ -9,7 +9,6 @@ import {
   ScrollView,
 } from 'react-native';
 
-import Guideline from '~/components/Guideline';
 import LatestEarthquakeMap from '~/components/LatestEarthquakeMap';
 import NearbyEarthquakeList from '~/components/NearbyEarthquakeList';
 import { Earthquake, LatestQuakeLocation, LocationType } from '~/types/types';
@@ -76,7 +75,6 @@ export default function Home() {
           ) : (
             <Text>Failed to get location.</Text>
           )}
-          <Guideline />
         </ScrollView>
       </SafeAreaView>
     </View>

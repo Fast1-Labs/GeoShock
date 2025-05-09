@@ -24,6 +24,12 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="guide"
+        options={{
+          tabBarIcon: ({ color }) => <FontAwesome name="book" color={color} size={25} />,
+        }}
+      />
+      <Tabs.Screen
         name="history"
         options={{
           tabBarIcon: ({ color }) => <FontAwesome name="history" color={color} size={25} />,
