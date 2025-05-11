@@ -42,10 +42,14 @@ export default function Onboarding() {
         dot={<View className="m-1 mb-auto h-3 w-3 rounded-full bg-gray-400" />}
         activeDot={<View className="m-1 h-3 w-3 rounded-full bg-red-500" />}>
         {slides.map((slide, index) => (
-          <View key={index} className="flex-1 items-center justify-center p-6">
-            <Text className="mb-2 text-center text-3xl font-bold text-red-600">{slide.title}</Text>
-            <Image source={{ uri: slide.image }} className="mb-2 h-1/2 w-full rounded" />
-            <Text className="mt-4 text-center text-base text-gray-700">{slide.description}</Text>
+          <View key={index} className="flex-1 items-center justify-center gap-3 p-8">
+            <Text className="mb-2 text-center text-3xl font-extrabold text-red-600">
+              {slide.title}
+            </Text>
+            <Image source={{ uri: slide.image }} className="mb-2 h-1/2 w-full rounded opacity-80" />
+            <Text className="mt-4 text-center text-lg font-bold text-gray-700">
+              {slide.description}
+            </Text>
 
             {index === slides.length - 1 ? (
               <TouchableOpacity
