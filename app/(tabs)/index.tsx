@@ -9,6 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 
+import Compass from '~/components/Compass';
 import LatestEarthquakeMap from '~/components/LatestEarthquakeMap';
 import NearbyEarthquakeList from '~/components/NearbyEarthquakeList';
 import { Earthquake, LatestQuakeLocation, LocationType } from '~/types/types';
@@ -62,6 +63,9 @@ export default function Home() {
                 <Text className="text-center font-semibold">
                   Location: {location.city},{location.region}/{location.country}
                 </Text>
+              </View>
+              <View className="items-center">
+                <Compass />
               </View>
               <View className="mb-10 h-96 p-2">
                 <Text className="mb-2 text-lg font-semibold">Nearby Earthquakes</Text>
